@@ -45,3 +45,45 @@ Stores the name of the player with the most regular seasons played.
 - player_data
 
 Stores all regular season data for the selected player.
+# Class Methods
+- filter_regular_season()
+
+Filters the dataset to include only rows where Stage equals "Regular_Season".
+
+- player_most_seasons()
+
+Determines which player has played the most unique regular seasons.
+
+- get_player_data()
+
+Retrieves and sorts all regular season data for the selected player.
+
+- calculate_three_point_accuracy()
+
+Calculates three-point shooting accuracy (3PM / 3PA) while avoiding division by zero.
+
+- linear_regression_accuracy()
+
+Performs linear regression on three-point accuracy over time using SciPy.
+
+- integrate_average_accuracy(years, slope, intercept)
+
+Uses numerical integration to compute the average fitted accuracy from the regression line and compares it to the actual average.
+
+- interpolate_missing_seasons()
+
+Uses linear interpolation to estimate three-point accuracy for the 2002 and 2015 seasons.
+
+- descriptive_statistics()
+
+Calculates mean, variance, skewness, and kurtosis for FGM and FGA.
+
+- perform_t_tests()
+
+Performs both paired and independent t-tests comparing FGM and FGA.
+# Limitations
+- The dataset must contain properly formatted column names exactly as specified.
+- The Season format must allow extraction of the starting year.
+- If no regular season data exists, the program will raise an error.
+- Interpolation is limited to linear estimation.
+- The analysis depends entirely on the accuracy and completeness of the dataset.
